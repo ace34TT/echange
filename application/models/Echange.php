@@ -76,7 +76,7 @@
     }
     function inscription()
     {
-        $sql="select count(id) i from user";
+        $sql="select count(id) i from users";
         $query = $this->db->query($sql);
         $row = $query->row_array();
         return $row["i"];

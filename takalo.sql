@@ -1,6 +1,6 @@
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
--- drop database echanges;
+drop database echanges;
 create database echanges;
 use echanges;
 create table users(
@@ -31,7 +31,7 @@ create table photo_objet(
     photo varchar(50),
     FOREIGN KEY (id_objet) REFERENCES objet(id_objet)
 )ENGINE=InnoDB DEFAULT CHARSET=latin1; 
-create table photo_user(
+create table photo_users(
     id_user integer,
     photo varchar(50),
     FOREIGN KEY (id_user) REFERENCES users(id)
@@ -53,9 +53,9 @@ create table delete_objet(
 Insert into users values (null,'admin@gmail.com','admin','1234','2000-02-10');
 Insert into users values (null,'rabe@gmail.com','rabe','0101','1998-04-28');
 Insert into users values (null,'soa@gmail.com','Soa','0202','2001-08-01');
-Insert into photo_user values (1,'user1.jpg');
-Insert into photo_user values (2,'user2.jpg');
-Insert into photo_user values (3,'user3,jpg');
+Insert into photo_users values (1,'user1.jpg');
+Insert into photo_users values (2,'user2.jpg');
+Insert into photo_users values (3,'user3,jpg');
 
 Insert into categorie values (null,'chapeau');
 Insert into categorie values (null,'chaussures');
@@ -95,7 +95,7 @@ create or replace view v_objet_photo as
 );
     create or replace view v_objet_details as
 (
-    select o.*,nom_categorie,pu.photo photo_user from v_objet_photo o join categorie c on c.id_categorie = o.id_categorie join photo_user pu on pu.id_user=o.id_owner
+    select o.*,nom_categorie,pu.photo photo_users from v_objet_photo o join categorie c on c.id_categorie = o.id_categorie join photo_users pu on pu.id_user=o.id_owner
 );
 create or replace view proprietaires as
 (

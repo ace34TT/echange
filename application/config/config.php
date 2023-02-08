@@ -24,7 +24,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 
-//$config['base_url'] = 'http://localhost/echange/';
+// $config['base_url'] = 'http://localhost/echange/';
 $config['base_url'] = 'https://object.joblinkagency.com/';
 
 // $autoload['libraries'] = array('database'); // Les librairies

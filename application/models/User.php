@@ -38,7 +38,7 @@
         } 
         public function photo_of_id($id)
         {   
-            $sql = "select photo from users u join photo_user pu on pu.id_user=u.id  where u.ID=%s";
+            $sql = "select photo from users u join photo_users pu on pu.id_user=u.id  where u.ID=%s";
             $sql=sprintf($sql,$this->db->escape($id));
             $query = $this->db->query($sql);
             $row = $query->row_array();
@@ -143,7 +143,7 @@
         } 
         public function insert_new_photo($avatar)
         {   
-            $sql = "insert into photo_user values ((select max(id) from users),%s)";
+            $sql = "insert into photo_users values ((select max(id) from users),%s)";
             $sql=sprintf($sql,$this->db->escape($avatar));
             $query = $this->db->query($sql);
         }    

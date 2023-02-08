@@ -57,7 +57,7 @@ class User_c extends DB_Controller
 		$data['content'] = 'page_echange/content';
 		// redirect('user_c/load/'.$data);
 		
-		$dota['user']=$data['my_objets'][0]['photo_user'];
+		$dota['user']=$data['my_objets'][0]['photo_users'];
 		$dota['categories']=$this->Objet->get_liste_categorie();
 		$this->load->view('template/page_echange/header',$dota);
 

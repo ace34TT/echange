@@ -21,7 +21,7 @@
                            <div class="btn_main">
                               <div class="buy_bt">
                                  <ul>
-                                       <img src=" <?php echo base_url();?>assets/img/echanges/users/<?php echo $objet['photo_user']; ?>" width=36 height=36 class='round_profile'>
+                                       <img src=" <?php echo base_url();?>assets/img/echanges/users/<?php echo $objet['photo_users']; ?>" width=36 height=36 class='round_profile'>
 
                                     
                                     <li>Echanger avec</li>

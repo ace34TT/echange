@@ -75,10 +75,16 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
+	// 'hostname' => 'localhost',
+	// 'username' => 'root',
+	// 'password' => 'root',
+	// 'database' => 'echanges',
+
 	'hostname' => '81.19.215.12',
 	'username' => 'echange',
 	'password' => 'code1212@T',
 	'database' => 'echanges',
+
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
