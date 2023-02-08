@@ -11,7 +11,7 @@
               <form action="<?php echo base_url('main/login');?>" method="post">
                 <div class="form-group first">
                   <label for="mail">Your mail</label>
-                  <input type="mail" class="form-control" name="mail" placeholder="your-email@gmail.com" id="mail"
+                  <input type="mail" class="form-control" name="mail" placeholder="your-email@gmail.com admin@gmail.com/1234" id="mail"
                    value='<?php  if(isset($mail)) echo $mail;   ?>' required>
                 </div>
                 <div class="form-group last mb-3">

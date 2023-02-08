@@ -28,7 +28,8 @@ class User_c extends DB_Controller
 		}
 		$categorie = $this->input->get("categorie");
 		$data['my_objets'] = $this->Objet->get_liste($data['user']['id'],'true');
-		$this->session->set_userdata('user', $data['my_objets'][0]['photo_user']);	
+		$img=$this->User->photo_of_id($this->session->userdata('id'));
+		$this->session->set_userdata('user', $img);	
         $data['content'] = 'page_echange/content';
 		$this->load($data);
 	}
@@ -83,7 +84,7 @@ class User_c extends DB_Controller
 	// }
 	public function load($data)
 	{
-		$dota['user']=$data['my_objets'][0]['photo_user'];
+		$dota['user']=$this->session->userdata('user');
 		$dota['categories']=$this->Objet->get_liste_categorie();
 		$this->load->view('template/page_echange/header',$dota);
 		$this->load->view('template/page_echange/banner');

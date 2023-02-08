@@ -44,17 +44,17 @@
                   <a href="<?php echo base_url('user_c/index');?>">Home</a>
                   <a href="<?php echo base_url('user_c/deconexion');?>">Log out</a>
                   <a href="<?php echo base_url('user_c/my_objet');?>">My Objet</a>
-                  <a href="client.html">Client</a>
-                  <a href="contact.html">Contact</a>
+                  <!-- <a href="#">Client</a>
+                  <a href="#">Contact</a> -->
                </div>
                <span class="toggle_icon" onclick="openNav()"><img src=" <?php echo base_url();?>assets/page_style/images/toggle-icon.png"></span>
                <a class="logo" href="index.html"><img src=" <?php echo base_url();?>assets/logoo.png" width="200"></a></a>
                <form class="form-inline ">
                   <div class="login_text">
                      <ul>
-                        <li><a href="<?php echo base_url('user_c/index'); ?>"><?php echo $user;?><img src=" <?php echo base_url();?>assets/img/echanges/users/<?php echo $user;?>" width=36 height=36 class='round_profile'></a></li>
+                        <li><a href="<?php echo base_url('user_c/index'); ?>"><img src=" <?php echo base_url();?>assets/img/echanges/users/<?php echo   $this->session->userdata('user'); ?>" width=36 height=36 class='round_profile'></a></li>
                         <li><a href="<?php echo base_url();?>echange_c/my_echange"><img src=" <?php echo base_url();?>assets/page_style/images/bag-icon.png"></a></li>
-                        <li><a href="#">Mes echanges<img src=" <?php echo base_url();?>assets/page_style/images/search-icon.png"></a></li>
+                        <li><a href="#"><span class='entete'>Mes echanges <?php ?></span><img src=" <?php echo base_url();?>assets/page_style/images/search-icon.png"></a></li>
 
                         <form method="get" action="<?php echo base_url('echange_c/search')?>" >
 

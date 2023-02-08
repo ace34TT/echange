@@ -21,18 +21,9 @@
                            <div class="btn_main">
                               <div class="buy_bt">
                                  <ul>
-                                    <!-- <li class="active"><a href="#"></a></li> -->
                                        <img src=" <?php echo base_url();?>assets/img/echanges/users/<?php echo $objet['photo_user']; ?>" width=36 height=36 class='round_profile'>
 
-                                    <!-- <li><a href="<?php //echo base_url();?>objet/echanger/<?php //echo $objet['id_objet']; ?>">echanger</a></li> -->
-                                    <!-- <input type="text" >
-                                    <ul >
-                                       <li><a href="#">Action</a></li>
-                                       <li><a href="#">Another action</a></li>
-                                       <li><a href="#">Something else here</a></li>
-                                       <li role="separator" class="divider"></li>
-                                       <li><a href="#">Separated link</a></li> class="dropdown-menu"
-                                    </ul> -->
+                                    
                                     <li>Echanger avec</li>
                                     <form action="<?php echo base_url()?>echange_c/with_my_objet" method="post">
                                        <input type="hidden" name="id_objet_other"value='<?php echo $objet['id_objet'];?>'>

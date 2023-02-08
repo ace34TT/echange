@@ -109,7 +109,7 @@
     }
     function estimation($prix)
     {
-      $sql="select *,%s prix_ref from v_objet_details where (prix> %s - 0.01*%s) and (prix < %s +0.01*%s)";
+      $sql="select *,%s prix_ref from v_objet_details where (prix> %s - 0.1*%s) and (prix < %s +0.1*%s)";
       
       $sql=sprintf($sql,$this->db->escape($prix),$this->db->escape($prix),$this->db->escape($prix),$this->db->escape($prix),$this->db->escape($prix));  
       $query = $this->db->query($sql);
@@ -124,7 +124,7 @@
     }
     function estimation20($prix)
     {
-      $sql="select *,%s prix_ref from v_objet_details where (prix> %s - 0.02*%s) and (prix < %s +0.02*%s)";
+      $sql="select *,%s prix_ref from v_objet_details where (prix> %s - 0.2*%s) and (prix < %s +0.2*%s)";
       
       $sql=sprintf($sql,$this->db->escape($prix),$this->db->escape($prix),$this->db->escape($prix),$this->db->escape($prix),$this->db->escape($prix));  
       $query = $this->db->query($sql);
@@ -139,7 +139,7 @@
     }
     function estimation_m($prix)
     {
-      $sql="select *,%s prix_ref from v_objet_details where prix> %s - 0.01*%s";
+      $sql="select *,%s prix_ref from v_objet_details where prix> %s - 0.1*%s";
       
       $sql=sprintf($sql,$this->db->escape($prix),$this->db->escape($prix),$this->db->escape($prix),$this->db->escape($prix),$this->db->escape($prix));  
       $query = $this->db->query($sql);
@@ -154,7 +154,7 @@
     }
     function estimation_p($prix)
     {
-      $sql="select *,%s prix_ref from v_objet_details where  prix < %s +0.01*%s";
+      $sql="select *,%s prix_ref from v_objet_details where  prix < %s +0.1*%s";
       
       $sql=sprintf($sql,$this->db->escape($prix),$this->db->escape($prix),$this->db->escape($prix),$this->db->escape($prix),$this->db->escape($prix));  
       $query = $this->db->query($sql);

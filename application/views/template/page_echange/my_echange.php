@@ -20,7 +20,7 @@
                      
                            <div class="contact_bt">
                            <!-- <a href="<?php //echo base_url('echange_c/confirmer');?>"> -->
-                              <button type="submit" <?php echo $objet['sender'];?>>Accepter</button>
+                              <button type="submit" class='my_button'<?php echo $objet['sender'];?>>Accepter</button>
                            <!-- </a> -->
                            </div>
                         </form>

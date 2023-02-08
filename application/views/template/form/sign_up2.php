@@ -12,7 +12,7 @@
                    </h3>
                  <span class='my_error'> <?php if(isset($error))  echo $error; ?></span>
               </div>
-              <form action="<?php echo base_url('main/insert');?>" method="post">
+              <form action="<?php echo base_url('main/insert');?>" method="post" enctype="multipart/form-data">
                 <div class="form-group first">
                   <label for="username">Mail</label>
                   <input type="mail" class="form-control" name="mail" placeholder="your-email@gmail.com" id="mail"
@@ -30,6 +30,14 @@
                 <div class="form-group last mb-3">
                   <label for="password">Password again</label>
                   <input type="password" class="form-control" name="password_again" placeholder="Your Password again" id="password_again" value='<?php if(isset($password_again))  echo $password_again; ?>' >
+                </div>
+                <div class="form-group last mb-3">
+                  <label for="password">Date de naissance</label>
+                  <input type="date" class="form-control" name="date_naissance" placeholder="Date de naissance" id="date_naissance" value='<?php if(isset($date_naissance))  echo $date_naissance; ?>' >
+                </div>
+                <div class="form-group last mb-3">
+                  <input type="hidden" name="MAX_FILE_SIZE" value="5000000">   
+                  Fichier : <input type="file" class="form-control" name="avatar"> 
                 </div>
 
                 <input type="submit" value="Sign Up" class="btn btn-block py-2 btn-primary">

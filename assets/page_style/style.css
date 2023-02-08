@@ -2,3 +2,13 @@
 {
     border-radius: 100%;
 }
+.my_button
+{
+    padding: 7px 15px;
+    border: 3px solid rgba(0, 0, 0, 0.177);
+    border-radius: 4px;
+}
+.entete
+{
+    color:rgb(73, 34, 49);
+}
